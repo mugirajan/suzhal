@@ -6,8 +6,9 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AuthRoutingModule } from './auth.routing.module';
-import { provideRouter } from '@angular/router';
+import { provideRouter, RouterOutlet, withComponentInputBinding } from '@angular/router';
 import { routes } from '../app.routes';
+import { RouterLink } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,12 @@ import { routes } from '../app.routes';
     FormsModule,
     ReactiveFormsModule, 
     HttpClientModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    RouterLink,
+    RouterOutlet
   ],
   providers: [provideHttpClient(),
-    provideRouter(routes)
+    provideRouter(routes, withComponentInputBinding())
   ],
   exports: [
     LoginComponent,
