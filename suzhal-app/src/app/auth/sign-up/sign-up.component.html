@@ -1,36 +1,49 @@
-<section class="signup-section">
-    <div class="signup-container">
-        <div class="signup-box">
-            <div class="logo">
-                <img src="/suzhal-app/src/assets/BITS-image/choozhal-logo-for-inaguration-v2.jpg" alt="Logo">
-            </div>
-            <h2>Create Your Account</h2>
-            <form>
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Username" required />
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email" required />
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-phone"></i>
-                    <input type="tel" placeholder="Phone Number" required />
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" required />
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Confirm Password" required />
-                </div>
-                <button type="submit" class="signup-btn">Sign Up</button>
-                <div class="login-link">
-                    Already have an account? <a href="/login">Login</a>
-                </div>
-            </form>
+<!-- src/app/register/register.component.html -->
+<div class="register-container">
+    <div class="register-box">
+      <h2>Register</h2>
+      <form (ngSubmit)="register()">
+        <div class="input-group">
+          <input
+            type="text"
+            ng-model="user.username"
+            name="username"
+            placeholder="Username"
+            required
+          />
         </div>
+        <div class="input-group">
+          <input
+            type="password"
+            ng-model="user.password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="text"
+            ng-model="user.phone"
+            name="phone"
+            placeholder="Phone Number"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="email"
+            ng-model="user.email"
+            name="email"
+            placeholder="Email ID"
+            required
+          />
+        </div>
+        <button type="submit" class="register-btn">Register</button>
+      </form>
+      <div class="signup-link pt-3">
+        Already have an account? <a href="/login">Login</a>
+      </div>
     </div>
-</section>
+  </div>
+  

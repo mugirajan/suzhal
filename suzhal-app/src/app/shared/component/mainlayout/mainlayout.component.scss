@@ -1,0 +1,23 @@
+.app {
+    display: flex;
+  }
+  
+  .app-sidebar {
+    width: 250px; /* Matches the sidebar width */
+    flex-shrink: 0;
+  }
+  
+  .app-container {
+    flex-grow: 1;
+    
+    margin-top: 40px; /* Navbar height */
+  }
+  
+  .app-content {
+    padding: 20px;
+  }
+  
+  .content-wrapper {
+    margin-top: 20px;
+  }
+  

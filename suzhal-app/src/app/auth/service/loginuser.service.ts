@@ -7,12 +7,16 @@ import { User } from '../model/user.model';
   providedIn: 'root'
 })
 export class LoginUserService { 
-    private baseurl = "http://localhost:8081/user/login";
 
-    constructor(private httpClient: HttpClient) {}
+  private baseUrl = 'http://localhost:8080/api/auth';
 
-    loginUser(user: User): Observable<object> {
-        console.log(user)
-        return this.httpClient.post(this.baseurl, user); 
-    }
+  constructor(private http: HttpClient) {}
+
+  register(user: User): Observable<any> {
+    return this.http.post(`${this.baseUrl}/register`, user);
+  }
+
+  login(username: string, password: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/login`, { username, password });
+  }
 }

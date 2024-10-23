@@ -9,12 +9,15 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { provideHttpClient } from '@angular/common/http';
+import { MainlayoutComponent } from './shared/component/mainlayout/mainlayout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    MainlayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +25,7 @@ import { provideHttpClient } from '@angular/common/http';
     RouterModule,
     AuthModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

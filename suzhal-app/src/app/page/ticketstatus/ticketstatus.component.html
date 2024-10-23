@@ -1,0 +1,25 @@
+<div class="status-step-bar">
+    <div class="step" [class.active]="currentStatus >= 1">
+      <div class="step-number">1</div>
+      <div class="step-title">Ticket Created</div>
+    </div>
+    <div class="step-line" [class.active]="currentStatus >= 2"></div>
+  
+    <div class="step" [class.active]="currentStatus >= 2">
+      <div class="step-number">2</div>
+      <div class="step-title">In Progress</div>
+    </div>
+    <div class="step-line" [class.active]="currentStatus >= 3"></div>
+  
+    <div class="step" [class.active]="currentStatus >= 3">
+      <div class="step-number">3</div>
+      <div class="step-title">Resolved</div>
+    </div>
+  </div>
+  
+  <!-- Step navigation buttons -->
+  <div class="step-navigation">
+    <button (click)="previousStep()" [disabled]="currentStatus === 1">Previous</button>
+    <button (click)="nextStep()" [disabled]="currentStatus === 3">Next</button>
+  </div>
+  

@@ -1,0 +1,20 @@
+.home-container {
+    background-image: url('https://www.cnet.com/a/img/resize/19394aca4affc504651051d009160d0c0d216218/hub/2022/10/10/f2ff9ef7-f016-459d-b88a-a8a68270c315/solar-gettyimages-525206743.jpg?auto=webp&fit=crop&height=675&width=1200');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 70vh; 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+  }
+  
+  .home-content {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+  }
+  
